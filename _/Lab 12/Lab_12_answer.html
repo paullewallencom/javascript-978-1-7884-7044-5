@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab # 12</title>
+    </head>
+
+    <body>
+        <h2>Highlight bold words on hover</h2>
+
+        <p onmouseover="greenWords()" onmouseout="returnColor()"><strong>LearnToProgram.tv</strong> is one of the <strong>best</strong> programming courses that will <strong>advance</strong> your coding <strong>skills</strong> and pave the <strong>way</strong> to a better future building <strong>applications</strong>.
+            <script>
+                function greenWords() {
+                    var boldWords = document.getElementsByTagName('strong');
+                    for (var i = 0; i < boldWords.length; i++) {
+                        boldWords[i].style.color = 'purple';
+                    }
+                }
+
+                function returnColor() {
+                    var boldWords = document.getElementsByTagName('strong');
+                    for (var i = 0; i < boldWords.length; i++) {
+                        boldWords[i].style.color = 'black';
+                    }
+                }
+            </script>
+
+    </body>
+
+</html>

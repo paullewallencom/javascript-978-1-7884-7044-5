@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab # 13</title>
+    </head>
+    <h1>Show location on Google Maps</h1>
+
+    <button id='getLocationBtn'> Get Location</button>
+
+    <p id='mapsLink'></p>
+
+    <body>
+        <script>
+            window.onload = function() {
+                document.getElementById('getLocationBtn').addEventListener('click', grabLocation)
+            };
+
+            function grabLocation() {
+                navigator.geolocation.getCurrentPosition(showGoogleLink, error);
+            };
+
+            function error() {
+                alert('There was an error');
+            };
+
+            var myLocation = document.getElementById('mapsLink');
+
+            function showGoogleLink(position) {
+                myLocation.innerHTML = "<a href=https://www.google.com/maps/@" + position.coords.latitude + ',' + position.coords.longitude + "> CLICK ME </a>"
+            };
+        </script>
+
+    </body>
+
+</html>

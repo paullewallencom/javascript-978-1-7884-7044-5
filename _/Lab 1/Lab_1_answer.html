@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab #1 </title>
+
+    </head>
+
+    <body>
+        <h1>She sells seashells by the seashore.</h1>
+
+        <button id="consoleButton">Click me to output to the console!</button>
+        <button id="browserButton">Click me to output to the browser!</button>
+
+
+        <script>
+            window.onload = function() {
+                document.getElementById("consoleButton").addEventListener("click", firstResponse);
+                document.getElementById("browserButton").addEventListener("click", secondResponse);
+            };
+
+            function firstResponse(e) {
+                console.log("Thanks for clicking the console button!")
+            }
+
+            function secondResponse(e) {
+                document.write("Thanks for clicking the browser button!")
+            }
+        </script>
+    </body>
+
+</html>

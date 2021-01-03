@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab # 16</title>
+    </head>
+
+    <body>
+        <h1> Creating an object </h1>
+        <input id='phoneModel' placeholder="Model" />
+        <input id='phoneColor' placeholder="Color" />
+        <input id='phoneNetwork' placeholder="Network" />
+
+        <button id='submitBtn'>Show Object</button>
+        <script>
+            window.onload = function() {
+                document.getElementById('submitBtn').addEventListener('click', createPhone)
+            }
+
+            function createPhone() {
+                var phoneModel = document.getElementById('phoneModel').value
+                var phoneColor = document.getElementById('phoneColor').value
+                var phoneNetwork = document.getElementById('phoneNetwork').value
+                var newPhone = new Phone(phoneModel, phoneColor, phoneNetwork);
+                console.log(newPhone)
+            }
+
+            function Phone(phoneModel, phoneColor, phoneNetwork) {
+                this.Model = phoneModel;
+                this.Color = phoneColor;
+                this.Network = phoneNetwork;
+
+            }
+        </script>
+
+    </body>
+
+</html>

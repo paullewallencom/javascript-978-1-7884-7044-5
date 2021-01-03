@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab # 8</title>
+
+    </head>
+
+    <body>
+        <h1>Check to see if it's a weekend</h1>
+        <input type="text" id='inputDay'>
+        <button id='checkDay'>CHECK</button>
+        <script>
+            window.onload = function() {
+                document.getElementById('checkDay').addEventListener('click', runIsWeekend)
+            }
+
+            function runIsWeekend() {
+                var dateToCheck = document.getElementById('inputDay').value;
+                isWeekend(dateToCheck);
+            }
+
+            function isWeekend(userDate) {
+                var d = new Date(userDate);
+                if (d.getDay() == 6 || d.getDay() == 0) {
+                    return alert('IS WEEKEND')
+                }
+                alert('IS NOT WEEKNED')
+            }
+        </script>
+    </body>
+
+</html>

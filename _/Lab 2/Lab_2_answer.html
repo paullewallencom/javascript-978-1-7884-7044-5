@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab #2 </title>
+
+    </head>
+
+    <body>
+        <h1>Let's do some math!<h1>
+          <button id="addingButton">Add!</button>
+          <input id="inputOne" type="number" />
+          <input id="inputTwo" type="number" />
+
+        <script>
+          window.onload = function() {
+            document.getElementById('addingButton').addEventListener('click', addNumbers);
+           };
+          function addNumbers(e) {
+             var answer = "";
+             answer += + document.getElementById('inputOne').value + + document.getElementById('inputTwo').value
+           alert(answer)
+          };
+        </script>
+    </body>
+
+</html>

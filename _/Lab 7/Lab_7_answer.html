@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab #7 </title>
+
+    </head>
+
+    <body>
+        <h1>Confirm Dialog</h1>
+
+
+        <button id='confirmButton'>Try it</button>
+
+        <p id="text"></p>
+
+        <script>
+            window.onload = function() {
+                document.getElementById('confirmButton').addEventListener('click', runConfirm)
+            }
+
+            function runConfirm() {
+                var message;
+                if (confirm("Press a button!") == true) {
+                    message = "You pressed OK!";
+                } else {
+                    message = "You pressed Cancel!";
+                }
+                document.getElementById("text").innerHTML = message;
+            }
+        </script>
+    </body>
+
+</html>

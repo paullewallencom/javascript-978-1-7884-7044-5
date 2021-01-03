@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab #4 </title>
+
+    </head>
+
+    <body>
+        <h1>Type in your name several times along with a bunch of random words</h1>
+        <input id="inputNameBox" type="text" />
+        <button id="findNameBtn">Find!</button>
+
+        <script>
+            window.onload = function() {
+                document.getElementById("findNameBtn").addEventListener("click", lookForName);
+            };
+
+            function lookForName() {
+
+                var myName = "Joe";
+                var timesFound = [];
+                var text = document.getElementById("inputNameBox").value
+
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] === "J") {
+                        for (var j = i; j < (myName.length + i); j++) {
+                            timesFound.push(text[j]);
+                        }
+                    }
+                }
+                if (timesFound.length === 0) {
+                    alert("Your name wasn't found!");
+                } else {
+                    alert(timesFound);
+                }
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Lab # 8</title>
+
+    </head>
+
+    <body>
+        <h1>Capitalize the first letter of the first word in a string</h1>
+
+        <script>
+            window.onload = function() {
+                var sentence = "hey this is me."
+
+                function capWord(str) {
+                    return str.charAt(0).toUpperCase() + str.slice(1);
+                }
+                alert(capWord(sentence))
+            }
+        </script>
+    </body>
+
+</html>
